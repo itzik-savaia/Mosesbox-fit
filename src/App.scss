@@ -1,6 +1,7 @@
 body {
   background: url('./1.jpg')center / cover no-repeat;
-  height: 100vh;
+  // height: 100vh;
+  background-size: auto;
   margin: 0;
   display: flex;
   justify-content: center;
