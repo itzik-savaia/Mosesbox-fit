@@ -38,7 +38,7 @@ const App = () => {
           <div className="menu-bar itzik">
             <div>
               פיתוח ע"י -
-                  <a href="https://www.facebook.com/itzik.savaia.14/">איציק </a>
+                  <a href="https://itzik-portfolio.herokuapp.com/">איציק </a>
             </div>
           </div>
         </div>
