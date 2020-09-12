@@ -1,0 +1,73 @@
+body {
+  background: url('./1.jpg')center / cover no-repeat;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+}
+.itzik {
+  color: white;
+  top: 26rem !important;
+  display: inherit;
+  @media only screen and (max-width: 600px) {
+    top: 400px !important;
+    }
+  a {
+    color: red;
+  }
+}
+.menu-bar {
+  border-radius: 25px;
+  height: fit-content;
+  display: inline-flex;
+  background-color: rgba(255, 255, 255, .13);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);  
+  align-items: center;
+  padding: 0 10px;
+  bottom: 5%;
+  position: relative;
+  top: 23.5rem;
+  @media only screen and (max-width: 600px) {
+    top: 373px;
+    }
+  b &Link {
+    // color:#b71c1c;
+    color: white;
+    &:hover{
+      color: black;
+    }
+  }
+  .L_link {
+    list-style: none;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 12px 16px;
+    margin: 0 8px;
+    position: relative;
+    cursor: pointer;
+    white-space: nowrap;
+    &::before {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left:0;
+        height:100%;
+        width: 100%;
+        z-index:-1;
+        transition: .2s;
+        border-radius: 25px;
+    }
+        &:hover {
+            &::before {
+                background: linear-gradient(to bottom, #e8edec, #d2d1d3);
+                    box-shadow: 0px 3px 20px 0px black;
+                    transform: scale(1.2);
+            }
+            color: black;
+    }
+  }
+}
