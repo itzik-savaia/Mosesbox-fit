@@ -1,6 +1,6 @@
 .send {
   position: relative;
-  top: 23rem !important;
+  top: 22rem !important;
   border-radius: 25px;
   height: fit-content;
   background-color: rgba(255, 255, 255, .13);
@@ -14,7 +14,7 @@
     color:#b71c1c;
   }
   @media only screen and (max-width: 600px) {
-    top: 23rem !important;
+    top: 22rem !important;
   }
   .M_textfield {
     list-style: none;
@@ -46,7 +46,7 @@
             color: black;
     }
     @media only screen and (max-width: 600px) {
-      height: 80px;
+      // height: 80px;
     }
   }
   .M_buttom {
@@ -86,6 +86,7 @@
   }
 }
 .details {
+  top: 0%;
   color: darkgoldenrod;;
   position: absolute;
   display: grid;
