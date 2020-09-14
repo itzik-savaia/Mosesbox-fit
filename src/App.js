@@ -35,6 +35,7 @@ const App = () => {
               </Link>
             </div>
           </nav> */}
+
           <div className="menu-bar itzik">
             <div>
               פיתוח ע"י -

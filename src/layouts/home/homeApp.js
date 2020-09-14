@@ -4,8 +4,7 @@ import { Button, TextField } from '@material-ui/core';
 import { useSelector, useDispatch, } from 'react-redux';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
-// import emailjs from 'emailjs';
-
+import * as emailjs from 'emailjs-com'
 
 const HomeApp = (props) => {
     var dispatch = useDispatch();
@@ -23,14 +22,13 @@ const HomeApp = (props) => {
         dispatch({ type: 'PHONE', payload: e.target.value })
     }
     const ContectSubmit = (e) => {
-        e.preventDefault();
-        console.log(FullName, Phone);
-        // emailjs.sendForm('gmail', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
-        //     .then((result) => {
-        //         console.log(result.text);
-        //     }, (error) => {
-        //         console.log(error.text);
-        //     });
+        e.preventDefault()
+        emailjs.sendForm(`gmail`, `template_hoa03v8`, e.target, `user_LoGgSFuy0tH3qqeOV9pVp`)
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
         e.target.reset();
     }
 
