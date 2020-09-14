@@ -102,7 +102,21 @@
 }
 .MuiPaper-root {
   background-color: #e0e0e0;
+  color:  #e0e0e0;
   p {
     color: rgb(0, 0, 0 / 71%);
   }
 }
+.MuiOutlinedInput-notchedOutline {
+  border-color: #e0e0e0 !important;
+}
+.MuiInputLabel-outlined {
+  color: black;
+}
+.MuiFormLabel-root.Mui-focused {
+  color: black !important;
+  &:focus {
+    outline-color: black !important;
+  }
+}
+
