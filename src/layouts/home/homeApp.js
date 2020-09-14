@@ -4,10 +4,32 @@ import { Button, TextField } from '@material-ui/core';
 import { useSelector, useDispatch, } from 'react-redux';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
-import * as emailjs from 'emailjs-com'
+import * as emailjs from 'emailjs-com';
+
+
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import Slide from '@material-ui/core/Slide';
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+    return <Slide direction="up" ref={ref} {...props} />;
+});
+
 
 const HomeApp = (props) => {
     var dispatch = useDispatch();
+    const [open, setOpen] = React.useState(false);
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
 
     const { FullName, Phone, } = useSelector((state) => ({
         ...state.ContectReducer,
@@ -92,6 +114,7 @@ const HomeApp = (props) => {
                 </div>
                 <div className="M_buttom">
                     <Button
+                        onClick={handleClickOpen}
                         type="submit"
                         fullWidth
                         variant="contained">
@@ -99,6 +122,25 @@ const HomeApp = (props) => {
                     </Button>
                 </div>
             </form>
+            <div>
+                <Dialog
+                    open={open}
+                    TransitionComponent={Transition}
+                    keepMounted
+                    onClose={handleClose}
+                    aria-labelledby="alert-dialog-slide-title"
+                    aria-describedby="alert-dialog-slide-description">
+                    <DialogTitle id="alert-dialog-slide-title">{`${FullName}, הפרטים שלך נשלחו`}</DialogTitle>
+                    <DialogContent>
+                        <DialogContentText id="alert-dialog-slide-description">
+                            תודה רבה נחזור אליך בהקדם האפשרי
+                        </DialogContentText>
+                    </DialogContent>
+                    <DialogActions>
+                        <Button onClick={handleClose} color="primary">סגור</Button>
+                    </DialogActions>
+                </Dialog>
+            </div>
         </div>
     )
 }

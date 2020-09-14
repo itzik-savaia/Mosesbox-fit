@@ -100,16 +100,9 @@
     color: white;
   }
 }
-// .flyer {
-//   background: url('../../favicon/flyer.png')center / cover no-repeat;
-//   position: absolute;
-//   height: 50vh;
-//   width: 25%;
-//   margin: 0;
-//   display: flex;
-//   @media only screen and (max-width: 600px) {
-//     height: 45vh;
-//     width: 50%;
-//     bottom: 55%;
-//   }
-// }
+.MuiPaper-root {
+  background-color: #e0e0e0;
+  p {
+    color: rgb(0, 0, 0 / 71%);
+  }
+}
