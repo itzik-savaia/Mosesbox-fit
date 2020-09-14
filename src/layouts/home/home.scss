@@ -80,10 +80,12 @@
   display: flex;
   right: 0%;
   bottom: 70%;
+  background-size: cover;
   @media only screen and (max-width: 600px) {
     height: 20vh;
     width: 25%;
     bottom: 84%;
+    background-size: cover;
   }
 }
 .details {
@@ -107,13 +109,6 @@
     color: rgb(0, 0, 0 / 71%);
   }
 }
-// .MuiOutlinedInput-notchedOutline {
-//   // border-color: #e0e0e0 !important;
-//   &:active {
-//     outline-color: black !important;
-//     // border-color: black !important;
-//   }
-// }
 .MuiInputLabel-outlined {
   color: white !important;
 

@@ -15,7 +15,8 @@ const HomeApp = (props) => {
     const [open, setOpen] = React.useState(false);
 
     const handleClickOpen = () => {
-        setOpen(true);
+        if (FullName)
+            setOpen(true);
     };
 
     const handleClose = () => {
