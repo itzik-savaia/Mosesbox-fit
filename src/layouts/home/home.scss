@@ -107,14 +107,20 @@
     color: rgb(0, 0, 0 / 71%);
   }
 }
-.MuiOutlinedInput-notchedOutline {
-  border-color: #e0e0e0 !important;
-}
+// .MuiOutlinedInput-notchedOutline {
+//   // border-color: #e0e0e0 !important;
+//   &:active {
+//     outline-color: black !important;
+//     // border-color: black !important;
+//   }
+// }
 .MuiInputLabel-outlined {
-  color: black;
+  color: white !important;
+
 }
 .MuiFormLabel-root.Mui-focused {
   color: black !important;
+  
   &:focus {
     outline-color: black !important;
   }
